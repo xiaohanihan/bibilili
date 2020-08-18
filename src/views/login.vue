@@ -1,26 +1,19 @@
 <template>
   <div class="container">
-    <login-top title="注册bibilili">
-      <div slot="right" style="font-size: 3.889vw" @click="$router.push('./login')">
-      登录
+    <login-top title="登陆">
+        <div slot="right" style="font-size: 3.889vw" @click="$router.push('./register')">
+        注册
       </div>
     </login-top>
     <div>
       <van-form @submit="onSubmit">
-        <van-field
-          v-model="name"
-          name="name"
-          label="用户名"
-          placeholder="请输入姓名"
-          style="margin:4.167vw 0"
-          :rules="[{required: true,message: ''}]"
-        />
         <van-field
           v-model="username"
           label="账号"
           name="username"
           placeholder="请输入用户名"
           :rules="[{required: true,message: ''}]"
+          style="margin: 4.167vw 0"
         />
         <van-field
           v-model="password"
@@ -36,7 +29,7 @@
         </template>
         </van-field>-->
         <div style="margin: 4.167vw;">
-          <van-button round block native-type="submit" color="#FF9DB7">注册</van-button>
+          <van-button round block native-type="submit" color="#FF9DB7">登录</van-button>
         </div>
       </van-form>
     </div>
